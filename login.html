@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="m.178hui.com" />
+<meta name="applicable-device" content="mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>汇协人力资源-登录</title>
+<link href="frozenui/css/frozen.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/login.js"></script>
+</head>
+<body style="background-color:#FFF">
+<div class="mobile">
+	<!--页面加载-->
+  <!--<div id="preloader">
+    <div id="status">
+      <p class="center-text"><span>拼命加载中···</span></p>
+    </div>
+  </div> -->
+  <!--header 开始-->
+  <header>
+    <div class="header">
+      <h2>汇协人力·登录</h2>
+    </div>
+  </header>
+  <div class="w main">
+  	<form class="frm_login" method="get" action="index.html">
+        <div class="item item-username">
+          <input id="username" class="txt-input txt-username" type="text" placeholder="请输入用户名/邮箱/手机号" value="" name="username">
+          <span class="man2"></span>
+          <b class="input-close" style="display: none;"></b> </div>
+        <div class="item item-password">
+          <input id="password" class="txt-input txt-password ciphertext" type="password" placeholder="请输入密码" name="password" style="display: inline;">
+          <input id="ptext" class="txt-input txt-password plaintext" type="text" placeholder="请输入密码" style="display: none;" name="ptext"><span class="man1"></span>
+          <b class="tp-btn btn-off"></b>
+        </div>
+        <div class="item item-login-option">
+        	<div class="aoutlogin">
+                <label class="ui-checkbox ui-checkbox-s">
+                    <input type="checkbox" name="checkbox" checked/>一个月内免登录
+                </label>
+            </div>
+        	<div class="aoutlogin1">
+                <label class="ui-checkbox ui-checkbox-s">
+                    <input type="checkbox" name="checkbox" checked/>记住密码
+                </label>
+            </div>
+        </div>
+        <div class="ui-btn-wrap"><a href="index.html"><input name="button" type="button" value="用户登录"  class="ui-btn-lg ui-btn-primary" /></a> </div>
+  	</form>
+  </div>
+</div>
+</body>
+</html>

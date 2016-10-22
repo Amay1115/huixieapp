@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>薪资手势解锁</title>
+<style type="text/css">
+   #gesturepwd { margin-top:20%; width:100%; height:80%;}
+   .txt_lm { margin-top:20%; width:100%; height:30px; line-height:30px; text-align:center;display:block; font-family:"微软雅黑"; font-size:30px;}
+</style>
+</head>
+<body style="background:#ccc;">
+
+      <span class="txt_lm">请输入薪资手势密码</span>
+  <center>
+    <div id="gesturepwd"></div>
+  </center>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.gesture.password.js" type="text/javascript"></script>
+
+<!--<script src="../dist/js/danmuplayer.min.js"></script>-->
+   <script>
+		$("#gesturepwd").GesturePasswd({
+			backgroundColor:"rgba(0,0,0,0.0)",//背景色
+			color:"#FFFFFF",   //主要的控件颜色
+			roundRadii:70,    //大圆点的半径
+			pointRadii:6, //大圆点被选中时显示的圆心的半径
+			space:100,  //大圆点之间的间隙
+			width:710,   //整个组件的宽度
+			height:710,  //整个组件的高度
+			lineColor:"#fdfbfb",   //用户划出线条的颜色
+			zindex :100  //整个组件的css z-index属性
+		});
+		$("#gesturepwd").on("hasPasswd",function(e,passwd){
+		      var result;
+		      if(passwd == "9875321"){
+		      result=true;
+		}
+			  else 
+			  {
+				 result=false;
+			  }
+		
+		
+		
+		if(result == true){
+		  $("#gesturepwd").trigger("passwdRight");
+		  setTimeout(function(){
+		
+			window.location.href="Salary.html";
+		  },500);  //延迟半秒以照顾视觉效果
+		}
+		else{
+		  $("#gesturepwd").trigger("passwdWrong");
+		
+			alert("密码错误！")
+		
+		}
+		});
+
+
+   </script>
+
+</body>
+</html>
